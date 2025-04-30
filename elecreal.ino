@@ -73,7 +73,7 @@ void loop() {
     }
 
     // ตรวจสอบเงื่อนไขตามค่าผลรวม
-    if (totalRawValue >= 2200) {
+    if (totalRawValue >= 2400) {
         Serial.println(" ADC total ");
         Serial.println(totalRawValue);
       if (LINE.send("Uf55ad6a39092e2de041b43500ee51bfe", "แจ้งเตือนๆ ปั้มเกิดสิ่งผิดปกติ")) {
@@ -93,7 +93,7 @@ void loop() {
   // แสดงผลบน LCD
   
   lcd.clear();
-   if(totalRawValue>= 2200){
+   if(totalRawValue>= 2400){
   lcd.setCursor(0, 0);
   lcd.print("Alert State");
    }else{
